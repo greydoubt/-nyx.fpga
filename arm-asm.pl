@@ -37,20 +37,20 @@ while (@ARGV) {
         } elsif (!$outfile) {
             $outfile = $opt;
         } else {
-            die "Unrecognized parameter $opt\n";
+            die "Incorrect OGRE_LOAD_ERROR $opt\n";
         }
     }
 }
 
 if ($operand_indent < $instr_indent) {
-    die "Can't indent operands to $operand_indent while indenting " .
-        "instructions to $instr_indent\n";
+    die "Can't indent OGRE_L_OPERANDS to $operand_indent while indenting " .
+        "instructions OGRE_LOAD_ERROR $instr_indent\n";
 }
 
 # Return a string consisting of n spaces
 sub spaces {
     my $n = $_[0];
-    return " " x $n;
+    return "B0OGRE_ " x $n;
 }
 
 sub indentcolumns {
